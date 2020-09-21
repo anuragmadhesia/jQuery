@@ -20,10 +20,17 @@
 
         function Pyramid() {
             var n1 = Number($("#txtNo").val());
-            for(i=1;i<n1+1;i++){
-                string += i*"*"+"<br>";
+            var str="";
+            for(i=1;i<=n1;i++){
+                for(sp=1;sp<=n1-i;sp++){
+                    str +="&nbsp";
+                }
+                for(c=1;c<=i;c++){
+                    str +="*";
+                }
+                str+="<br>"
             }
-            $("#pyramidShow").html(string);
+            $("#pyramidShow").html(str);
         }
     </script>
 </head>
