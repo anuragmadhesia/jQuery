@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>
+        Table
+    </title>
+    <link href="file/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(107, 18, 37);
+        }
+    </style>
+    <script src="file/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnTable").on('click', function () {
+                Table();
+            });
+        });
+
+        function Table() {
+            var n1 = Number($("#txtNo").val());
+            string="";
+            for(i=1;i<11;i++){
+                string += n1+" * "+i+" = "+n1*i+"<br>";
+            }
+            $("#tableShow").html(string);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container" style="padding-top: 10%;">
+        <div class="col-sm-12">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" style="background-color: teal;padding: 1%;width: 260px;">
+                Enter Number to get its table<br>
+                <input type="text" class="form-control" id="txtNo"><br>
+                <input type="button" class="Btn btn-success btn-lg" id="btnTable" value="Make Table">
+                <div id="tableShow"></div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>
+        Highest Number
+    </title>
+    <link href="file/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(107, 18, 37);
+        }
+    </style>
+    <script src="file/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnh").on('click', function() {Hck();});
+        });
+        function Hck(){
+                var t1=Number($("#txt1").val());
+                var t2=Number($("#txt2").val());
+                var t3=Number($("#txt3").val());
+                if(t1>t2){
+                    if(t1>t3){
+                        $("#txtshow").val("highest is "+t1).css("color","red");
+                    }
+                    else{
+                        $("#txtshow").val("highest is "+t3).css("color","red");
+                    }
+                }
+                else{
+                    if(t2>t3){
+                        $("#txtshow").val("ihighest is "+t2).css("color","red");
+                    }
+                    else{
+                        $("#txtshow").val("highest is "+t3).css("color","red");
+                    }
+                }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container" style="padding-top: 10%;">
+        <div class="col-sm-12">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" style="background-color: teal;padding: 1%;width: 260px;">
+                First Number<br>
+                <input type="text" class="form-control" id="txt1"><br>
+                Second Number<br>
+                <input type="text" class="form-control" id="txt2"><br>
+                Third Number<br>
+                <input type="text" class="form-control" id="txt3"><br>
+                <input type="button" class="form-control btn btn-success" id="btnh" value="Check"><br>
+                Result:
+                <input type="text" class="form-control" id="txtshow"><br>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

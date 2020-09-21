@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>
+        Armstrong Number
+    </title>
+    <link href="file/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(107, 18, 37);
+        }
+    </style>
+    <script src="file/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnC").on('click', function () {
+                Armstrong();
+            });
+        });
+
+        function Armstrong() {
+            var n1 = Number($("#txt").val());
+            sum=0;
+            temp=n1;
+            while(temp>0){
+                var r=temp%10;
+                sum+=r*r*r;
+                temp=parseInt(temp/10);
+            }
+            if(sum==n1){
+                alert("Number "+n1+" is armstrong...")
+            }
+            else{
+                alert("Number "+n1+" is not armstrong...")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container" style="padding-top: 10%;">
+        <div class="col-sm-12">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" style="background-color: teal;padding: 1%;width: 260px;">
+                Enter Number to Check :<br>
+                <input type="text" class="form-control" id="txt"><br>
+                <input type="button" class="Btn btn-success btn-lg" id="btnC" value="Check">
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

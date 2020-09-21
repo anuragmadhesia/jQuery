@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>
+        Simple Calculator
+    </title>
+    <link href="file/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(107, 18, 37);
+        }
+
+        .btn {
+            margin: 2%;
+        }
+    </style>
+    <script src="file/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#n1").on('click', function () {
+                Add('1');
+            });
+            $("#n2").on('click', function () {
+                Add('2');
+            });
+            $("#n3").on('click', function () {
+                Add('3');
+            });
+            $("#n4").on('click', function () {
+                Add('4');
+            });
+            $("#n5").on('click', function () {
+                Add('5');
+            });
+            $("#n6").on('click', function () {
+                Add('6');
+            });
+            $("#n7").on('click', function () {
+                Add('7');
+            });
+            $("#n8").on('click', function () {
+                Add('8');
+            });
+            $("#n9").on('click', function () {
+                Add('9');
+            });
+            $("#n0").on('click', function () {
+                Add('0');
+            });
+            $("#ad").on('click', function () {
+                Add('+');
+            });
+            $("#minus").on('click', function () {
+                Add('-');
+            });
+            $("#mul").on('click', function () {
+                Add('*');
+            });
+            $("#div").on('click', function () {
+                Add('/');
+            });
+            $("#clr").on('click', function () {
+                Clear();
+            });
+            $("#eql").on('click', function () {
+                Solve();
+            });
+        });
+        function Add(str) {
+            var num=$("#ansbox").val();
+            num=num+str;
+            $("#ansbox").val(num);
+        }
+        function Clear() {
+            $("#ansbox").val("");
+        }
+        function Solve() {
+            var num=$("#ansbox").val();
+            var slv=eval(num)
+            $("#ansbox").val(slv);
+        }
+    </script>
+</head>
+<body>
+    <div class="container" style="padding-top: 10%;">
+        <div class="col-sm-12">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" style="background-color: teal;padding: 1%;width: 260px;">
+            <input type="text" class="form-control" id="ansbox">
+            <br>
+            <input type="button" class="Btn btn-success btn-lg" value="1" id="n1">
+            <input type="button" class="Btn btn-success btn-lg" value="2" id="n2">
+            <input type="button" class="Btn btn-success btn-lg" value="3" id="n3">
+            <input type="button" class="Btn btn-success btn-lg" value="+" id="ad">
+            <br>
+            <input type="button" class="Btn btn-success btn-lg" value="4" id="n4">
+            <input type="button" class="Btn btn-success btn-lg" value="5" id="n5">
+            <input type="button" class="Btn btn-success btn-lg" value="6" id="n6">
+            <input type="button" class="Btn btn-success btn-lg" value="-" id="minus">
+            <br>
+            <input type="button" class="Btn btn-success btn-lg" value="7"  id="n7">
+            <input type="button" class="Btn btn-success btn-lg" value="8"  id="n8">
+            <input type="button" class="Btn btn-success btn-lg" value="9"  id="n9">
+            <input type="button" class="Btn btn-success btn-lg" value="*"  id="mul">
+            <br>
+            <input type="button" class="Btn btn-success btn-lg" value="C"  id="clr">
+            <input type="button" class="Btn btn-success btn-lg" value="0"  id="n0">
+            <input type="button" class="Btn btn-success btn-lg" value="="  id="eql">
+            <input type="button" class="Btn btn-success btn-lg" value="/"  id="div">
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    </div>
+
+</body>
+</html>

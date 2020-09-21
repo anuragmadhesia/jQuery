@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>
+        Simple Calculator
+    </title>
+    <link href="file/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(107, 18, 37);
+        }
+
+        .btn {
+            margin: 2%;
+        }
+    </style>
+    <script src="file/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnAdd").on('click', function () {
+                Add();
+            });
+            $("#btnSubstract").on('click', function () {
+                Substract();
+            })
+            $("#btnMultiply").on('click', function () {
+                Multiply();
+            })
+            $("#btnDivide").on('click', function () {
+                Divide();
+            })
+        });
+
+        function Add() {
+            var no1 = parseInt($("#txtNo1").val());
+            var no2 = parseInt($("#txtNo2").val());
+            var result = no1 + no2;
+            alert("The result is " + result);
+        }
+
+        function Substract() {
+            var no1 = parseInt($("#txtNo1").val());
+            var no2 = parseInt($("#txtNo2").val());
+            var result = no1 - no2;
+            alert("The result is " + result);
+        }
+
+        function Multiply() {
+            var no1 = parseInt($("#txtNo1").val());
+            var no2 = parseInt($("#txtNo2").val());
+            var result = no1 * no2;
+            alert("The result is " + result);
+        }
+
+        function Divide() {
+            var no1 = parseInt($("#txtNo1").val());
+            var no2 = parseInt($("#txtNo2").val());
+            var result = no1 / no2;
+            alert("The result is " + result);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container" style="padding-top: 10%;">
+        <div class="col-sm-12">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" style="background-color: teal;padding: 1%;width: 260px;">
+                First Number<br>
+                <input type="text" class="form-control" id="txtNo1" placeholder="Enter first number"><br>
+                Second Number<br>
+                <input type="text" class="form-control" id="txtNo2" placeholder="Enter second number"><br>
+                <input type="button" class="Btn btn-success btn-lg" id="btnAdd" value="Add">
+                <input type="button" class="Btn btn-success btn-lg" id="btnSubstract" value="Substract">
+                <input type="button" class="Btn btn-success btn-lg" id="btnMultiply" value="Multiply">
+                <input type="button" class="Btn btn-success btn-lg" id="btnDivide" value="Divide">
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+</body>
+
+</html>
