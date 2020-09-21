@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="file/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#dv").height(200).width(200).css("backgroundColor","teal");
+            $("#btn1").mouseenter(function(){
+                $("#dv").hide(5000);
+            });
+            $("#btn2").hover(function(){
+                $("#dv").show(5000);
+            });
+            $("#btn3").hover(function(){
+                $("#dv").fadeIn(5000);
+            });
+            $("#btn4").hover(function(){
+                $("#dv").fadeOut(5000);
+            });
+            $("#btn5").hover(function(){
+                $("#dv").fadeToggle(5000);
+            });
+            $("#btn51").hover(function(){
+                $("#dv").fadeTo(5000,0.3);
+            });
+            $("#btn6").hover(function(){
+                $("#dv").slideUp(5000);
+            });
+            $("#btn7").hover(function(){
+                $("#dv").slideDown(5000);
+            });
+            $("#btn8").hover(function(){
+                $("#dv").slideToggle(5000);
+            });
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="btn1" value="hide">
+    <input type="button" id="btn2" value="show">
+    <input type="button" id="btn3" value="fadein">
+    <input type="button" id="btn4" value="fadeout">
+    <input type="button" id="btn5" value="fadeToggle">
+    <input type="button" id="btn51" value="fadeTo">
+    <input type="button" id="btn6" value="slidein">
+    <input type="button" id="btn7" value="slideup">
+    <input type="button" id="btn8" value="slideToggle">
+    <br><br>
+    <div id="dv"></div>
+</body>
+</html>
